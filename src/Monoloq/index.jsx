@@ -1,13 +1,13 @@
 import { lazy, Suspense } from "react";
 import { Route, Switch } from "react-router";
-import EntriesView, { entriesReducer } from "./entries";
-import "./scss/main.scss";
+import EntriesView from "./entries";
+import { entriesReducer } from "./entries/utils";
 import { settingsReducer } from "./settings";
 
+import "./scss/main.scss";
+
 export const initialState = {
-    entries: {
-        1: {},
-    },
+    entries: {},
     settings: {
         created: null,
         theme: "light",

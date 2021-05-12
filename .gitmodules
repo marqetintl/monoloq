@@ -1,0 +1,3 @@
+[submodule "src/Monoloq/ui/textareax"]
+	path = src/Monoloq/ui/textareax
+	url = https://github.com/marqetintl/textareax.git
