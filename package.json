@@ -5,7 +5,8 @@
     "homepage": " https://marqetintl.github.io/monoloq/",
     "keywords": [
         "react",
-        "journal"
+        "journal",
+        "lifelog"
     ],
     "dependencies": {
         "@testing-library/jest-dom": "^5.11.4",
