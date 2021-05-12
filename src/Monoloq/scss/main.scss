@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#Monoloq {
+    height: 100vh;
+    overflow: hidden;
+    max-height: 100%;
+}
+
+.mn {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &-body {
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &-main {
+        flex-grow: 1;
+    }
+}
