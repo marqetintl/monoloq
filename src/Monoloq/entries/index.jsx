@@ -51,9 +51,9 @@ export default function EntriesView(props) {
 const Entries = ({ data = { entries: [] }, dispatch }) => {
     return (
         <div className="entries-day">
-            <div className="WeekDay">{formatDate(data.date)}</div>
+            <div className="weekday">{formatDate(data.date)}</div>
 
-            <div className="Notes">
+            <div className="items">
                 {data.entries.map((note) => (
                     <Entry {...{ dispatch }} data={note} key={note.slug} />
                 ))}

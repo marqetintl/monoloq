@@ -1,8 +1,9 @@
 .entries {
     padding-bottom: 50px;
 
-    &-items {
+    &-days {
         display: flex;
+        flex-direction: column;
         min-height: 100%;
         background-color: #ddd;
     }
@@ -15,10 +16,6 @@
             flex-grow: 1;
             min-height: 44px;
             max-height: 50vh;
-
-            // .TextareaX {
-            //     overflow-y: auto;
-            // }
         }
     }
 
@@ -28,5 +25,27 @@
         right: 0;
         left: 0;
         background-color: white;
+    }
+}
+
+.entries .entries-day {
+    padding: 6px;
+
+    .entry {
+        max-width: 85%;
+        margin-left: auto;
+        margin-bottom: 6px;
+
+        &-text {
+            padding: 6px;
+            border-radius: 6px;
+            background-color: coral;
+            white-space: pre-wrap;
+        }
+    }
+
+    .items {
+        display: flex;
+        flex-direction: column;
     }
 }
