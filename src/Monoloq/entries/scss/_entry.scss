@@ -1,0 +1,31 @@
+.entries .entries-day {
+    padding: 6px;
+
+    .entry {
+        max-width: 85%;
+        margin-left: auto;
+        margin-bottom: 6px;
+
+        &-text {
+            padding: 6px;
+            font-size: 14px;
+            border-radius: 6px;
+            background-color: #eee;
+            border: 1px solid #bbb;
+            white-space: pre-wrap;
+        }
+        &-meta {
+            text-align: right;
+        }
+    }
+
+    .items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .weekday {
+        text-align: center;
+        padding: 0.5rem;
+    }
+}

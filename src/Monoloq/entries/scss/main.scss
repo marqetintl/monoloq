@@ -1,0 +1,55 @@
+@import "./entry";
+
+.entries {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+
+    &-days {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+    }
+
+    &-add-form {
+        padding: 0.25rem 0.5rem;
+        padding-bottom: 0.5rem;
+        display: flex;
+        align-items: flex-end;
+
+        .btn {
+            margin-left: 0.25rem;
+        }
+
+        textarea {
+            border-color: transparent;
+
+            &:focus-visible {
+                outline: 0;
+            }
+        }
+
+        &-input {
+            overflow-y: auto;
+            max-height: 50vh;
+            flex-grow: 1;
+            min-height: 44px;
+            border-bottom: 2px solid black;
+        }
+    }
+
+    &-footer {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: white;
+    }
+}
+
+#EntryAddForm {
+    border-top: 1px solid #ddd;
+}

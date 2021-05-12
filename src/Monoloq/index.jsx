@@ -4,6 +4,8 @@ import EntriesView from "./entries";
 import { entriesReducer } from "./entries/utils";
 import { settingsReducer } from "./settings";
 
+import { JournalText } from "react-bootstrap-icons";
+
 import "./scss/main.scss";
 
 export const initialState = {
@@ -20,7 +22,9 @@ export default function Monoloq(props) {
     return (
         <div id="Monoloq">
             <div className="mn">
-                <header className="mn-header">header</header>
+                <header className="mn-header">
+                    <Logo />
+                </header>
 
                 <section className="mn-body">
                     <main className="mn-main" role="main">
@@ -37,6 +41,15 @@ export default function Monoloq(props) {
         </div>
     );
 }
+
+const Logo = ({ sitename = "Monoloq", ...props }) => {
+    return (
+        <div id="Logo" className="btn">
+            <JournalText className="btn-icon" />
+            <span className="btn-label">{sitename}</span>
+        </div>
+    );
+};
 
 export const reducers = {
     entries: entriesReducer,

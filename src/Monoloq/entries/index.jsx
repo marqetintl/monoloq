@@ -4,9 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 import EntryAddForm from "./forms";
 import { entriesActions } from "./utils";
 
-import "./style.scss";
 import { formatDate, formatDateToStr } from "../../utils";
 import Entry from "./Entry";
+
+import "./scss/main.scss";
 
 const byDate = new Map();
 

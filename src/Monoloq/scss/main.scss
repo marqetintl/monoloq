@@ -1,3 +1,5 @@
+@import "./logo";
+
 * {
     padding: 0;
     margin: 0;
@@ -7,6 +9,7 @@
     height: 100vh;
     overflow: hidden;
     max-height: 100%;
+    font-family: monospace;
 }
 
 .mn {
@@ -26,5 +29,21 @@
 
     &-main {
         flex-grow: 1;
+    }
+
+    &-header {
+        padding: 0.25rem;
+    }
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-color: transparent;
+
+    &-icon {
+        width: 1.5rem;
+        height: 1.5rem;
     }
 }

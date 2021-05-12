@@ -1,5 +1,10 @@
 export const IS_DEV = process.env.NODE_ENV !== "production";
 
+export const formatTime = (date, format = { hour: "numeric", minute: "numeric" }) => {
+    const date_time = new Intl.DateTimeFormat("en-US", { ...format });
+    return date_time.format(new Date(date));
+};
+
 export const formatDate = (date, format = { weekday: "short", month: "long", day: "numeric" }) => {
     const date_time = new Intl.DateTimeFormat("en-US", {
         ...format,
