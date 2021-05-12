@@ -7,12 +7,8 @@ import { entriesActions, cleanText } from "./utils";
 
 import TextareaX from "../ui/textareax/src";
 import { ArrowUpCircle } from "react-bootstrap-icons";
+import placeholders from "./placeholders";
 
-const placeholders = [
-    "What are your thoughts ...",
-    "What are you up to ...",
-    "How are you feeling right now ?!",
-];
 const getPlaceholder = () => sample(placeholders);
 
 const EntryInput = (props) => {
