@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/monoloq/static/css/main.63988dae.chunk.css",
-    "main.js": "/monoloq/static/js/main.9488fe50.chunk.js",
-    "main.js.map": "/monoloq/static/js/main.9488fe50.chunk.js.map",
+    "main.css": "/monoloq/static/css/main.3acca394.chunk.css",
+    "main.js": "/monoloq/static/js/main.2fdaf6dd.chunk.js",
+    "main.js.map": "/monoloq/static/js/main.2fdaf6dd.chunk.js.map",
     "runtime-main.js": "/monoloq/static/js/runtime-main.93f6a52a.js",
     "runtime-main.js.map": "/monoloq/static/js/runtime-main.93f6a52a.js.map",
     "static/js/2.5f8f8e91.chunk.js": "/monoloq/static/js/2.5f8f8e91.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.95e81e04.chunk.js": "/monoloq/static/js/3.95e81e04.chunk.js",
     "static/js/3.95e81e04.chunk.js.map": "/monoloq/static/js/3.95e81e04.chunk.js.map",
     "index.html": "/monoloq/index.html",
-    "static/css/main.63988dae.chunk.css.map": "/monoloq/static/css/main.63988dae.chunk.css.map",
+    "static/css/main.3acca394.chunk.css.map": "/monoloq/static/css/main.3acca394.chunk.css.map",
     "static/js/2.5f8f8e91.chunk.js.LICENSE.txt": "/monoloq/static/js/2.5f8f8e91.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.93f6a52a.js",
     "static/js/2.5f8f8e91.chunk.js",
-    "static/css/main.63988dae.chunk.css",
-    "static/js/main.9488fe50.chunk.js"
+    "static/css/main.3acca394.chunk.css",
+    "static/js/main.2fdaf6dd.chunk.js"
   ]
 }
