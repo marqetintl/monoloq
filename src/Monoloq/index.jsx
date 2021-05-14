@@ -23,7 +23,9 @@ export default function Monoloq(props) {
         <div id="Monoloq">
             <div className="mn">
                 <header className="mn-header">
-                    <Logo />
+                    <div>
+                        <Logo />
+                    </div>
                 </header>
 
                 <section className="mn-body">
@@ -55,3 +57,12 @@ export const reducers = {
     entries: entriesReducer,
     settings: settingsReducer,
 };
+
+// <div>
+//     <NavLink to={"/"} className="btn">
+//         <JournalPlus className="btn-icon" />
+//     </NavLink>
+//     <NavLink to={"/tasks/"} className="btn">
+//         <CardChecklist className="btn-icon" />
+//     </NavLink>
+// </div>;

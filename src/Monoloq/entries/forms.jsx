@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 
 import { entriesActions, cleanText } from "./utils";
 
-import TextareaX from "../ui/textareax/src";
+import TextareaX from "@miq/textareax";
 import { ArrowUpCircle } from "react-bootstrap-icons";
 import placeholders from "./placeholders";
 
