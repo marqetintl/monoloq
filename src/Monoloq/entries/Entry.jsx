@@ -34,7 +34,6 @@ export default function Entry({ data = {}, dispatch, ...props }) {
 }
 
 const UpdatePortal = ({ children, onClose, onDelete }) => {
-    console.log(onClose);
     const header = (
         <div className="">
             <div className="CloseButton" onClick={onClose}>

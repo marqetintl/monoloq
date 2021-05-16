@@ -41,8 +41,6 @@ export const todosActions = {
             }
 
             const fd = { slug: uuid(), value, dt };
-            console.log(fd);
-
             todos[key].push(fd);
 
             localStorage.setItem("todos", JSON.stringify(todos));
@@ -65,7 +63,6 @@ export const todosActions = {
 
                 let items = todos[key].map((item) => {
                     if (item.slug === slug) {
-                        console.log(newData);
                         return { ...item, ...newData };
                     }
                     return item;

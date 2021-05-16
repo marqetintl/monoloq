@@ -12,15 +12,15 @@ export default function TodosView(props) {
     const dispatch = useDispatch();
     const todos = useSelector((state) => state.todos)[formatDateToStr(currDate)] || [];
 
-    console.log(todos);
-
     useEffect(() => {
         dispatch(todosActions.byDate(new Date()));
     }, [dispatch]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(todosActions.post(todo));
+        dispatch(todosActions.post(todo)).then(({ status }) => {
+            setTodo("");
+        });
     };
 
     return (
