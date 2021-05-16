@@ -31,7 +31,7 @@ export const appStore = createStore(appReducer, initialState, compose(...enhance
 
 ReactDOM.render(
     <React.StrictMode>
-        <BrowserRouter>
+        <BrowserRouter basename="/monoloq">
             <Provider store={appStore}>
                 <App />
             </Provider>
