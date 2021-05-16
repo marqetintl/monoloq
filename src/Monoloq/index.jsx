@@ -1,6 +1,6 @@
 import { lazy, Suspense } from "react";
 import { NavLink } from "react-router-dom";
-import { Route, Switch } from "react-router";
+import { Redirect, Route, Switch } from "react-router";
 import { CardChecklist, Gear, JournalPlus, JournalText } from "react-bootstrap-icons";
 
 import "./scss/main.scss";
@@ -23,6 +23,7 @@ const SettingsView = lazy(() => import("./settings"));
 const TodosView = lazy(() => import("./todos"));
 
 export default function Monoloq(props) {
+    console.log(props.match);
     return (
         <div id="Monoloq" className="viewport">
             <div className="mn viewport-content">
@@ -32,13 +33,13 @@ export default function Monoloq(props) {
                     </div>
 
                     <div className="viewport-header-navlinks">
-                        <NavLink exact to={"/"} className="btn">
+                        <NavLink exact to={"/monoloq"} className="btn">
                             <JournalPlus className="btn-icon" />
                         </NavLink>
-                        <NavLink to={"/todo/"} className="btn">
+                        <NavLink to={"/monoloq/todo/"} className="btn">
                             <CardChecklist className="btn-icon" />
                         </NavLink>
-                        <NavLink to={"/settings/"} className="btn">
+                        <NavLink to={"/monoloq/settings/"} className="btn">
                             <Gear className="btn-icon" />
                         </NavLink>
                     </div>
@@ -48,9 +49,10 @@ export default function Monoloq(props) {
                     <main className="viewport-main" role="main">
                         <Suspense fallback={<div>loading ...</div>}>
                             <Switch>
-                                <Route path="/todo/" component={TodosView} />
-                                <Route path="/settings/" component={SettingsView} />
-                                <Route path="/" component={EntriesView} />
+                                <Route exact path="/monoloq" component={EntriesView} />
+                                <Route path="/monoloq/todo" component={TodosView} />
+                                <Route path="/monoloq/settings" component={SettingsView} />
+                                <Redirect to="/monoloq" />
                             </Switch>
                         </Suspense>
                     </main>
