@@ -4,7 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import EntryAddForm from "./forms";
 import { entriesActions } from "./utils";
 
-import { formatDate, formatDateToStr } from "../../utils";
+import { formatDate, formatDateToStr } from "@miq/shared";
+
 import Entry from "./Entry";
 
 import "./scss/main.scss";
@@ -42,7 +43,7 @@ export default function EntriesView(props) {
                 ))}
             </div>
 
-            <footer className="entries-footer">
+            <footer className="viewport-footer">
                 <EntryAddForm />
             </footer>
         </section>

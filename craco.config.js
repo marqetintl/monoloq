@@ -3,6 +3,7 @@ const { getLoader, loaderByName } = require("@craco/craco");
 
 const packages = [];
 packages.push(path.join(__dirname, "../textareax/src/"));
+packages.push(path.join(__dirname, "../miq-shared/src/"));
 
 module.exports = {
     webpack: {

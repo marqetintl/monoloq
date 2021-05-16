@@ -1,7 +1,7 @@
 import React from "react";
 import { initialState } from "..";
 
-export default function SettingsView() {
+export default function SettingsView(props) {
     return <div>settings</div>;
 }
 

@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 
 import { entriesActions, cleanText } from "./utils";
 
-import TextareaX from "@miq/textareax";
+import { TextareaX } from "@miq/shared";
 import { ArrowUpCircle } from "react-bootstrap-icons";
 import placeholders from "./placeholders";
 
@@ -16,6 +16,14 @@ const EntryInput = (props) => {
 
     return <TextareaX {...props} {...{ placeholder, maxLength }} required />;
 };
+
+const SubmitButton = ({ className }) => (
+    <div className={className}>
+        <button type="submit" className="btn" title="Submit">
+            <ArrowUpCircle className="btn-icon" />
+        </button>
+    </div>
+);
 
 export default function EntryAddForm(props) {
     const dispatch = useDispatch();
@@ -39,12 +47,40 @@ export default function EntryAddForm(props) {
                     <EntryInput value={text} onChange={(e) => setText(e.target.value)} />
                 </div>
 
-                <div className="entries-add-form-submit">
-                    <button type="submit" className="btn" title="Submit">
-                        <ArrowUpCircle className="btn-icon" />
-                    </button>
-                </div>
+                <SubmitButton className="entries-add-form-submit" />
             </form>
         </div>
     );
 }
+
+export const EntryUpdateForm = ({ data = {}, ...props }) => {
+    const dispatch = useDispatch();
+    const [text, setText] = useState(data.text || "");
+
+    if (!data.slug) return null;
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (text === data.text) return;
+
+        const payload = { ...data, text: cleanText(text) };
+        dispatch(entriesActions.patch(data.slug, payload)).then(({ status }) => {
+            if (!status) return;
+
+            if (props.onSuccess) return props.onSuccess(payload);
+        });
+    };
+
+    return (
+        <div id="EntryUpdateForm">
+            <form onSubmit={handleSubmit} className="entries-upd-form">
+                <div className="entries-upd-form-input">
+                    <EntryInput value={text} onChange={(e) => setText(e.target.value)} />
+                </div>
+
+                <SubmitButton className="entries-upd-form-submit" />
+            </form>
+        </div>
+    );
+};

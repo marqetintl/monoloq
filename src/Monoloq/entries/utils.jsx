@@ -32,6 +32,37 @@ export const entriesActions = {
 
             resolve({ ...entry, status: 1 });
         }),
+
+    patch: (slug, newEntry) => (dispatch, getStore) =>
+        new Promise((resolve, reject) => {
+            const state = getStore().entries;
+            let entry = state[slug];
+            if (!entry) return reject(new Error(`Invalid slug ${slug}.`));
+
+            entry = { ...entry, ...newEntry };
+            const newState = { ...state, [`${slug}`]: entry };
+            localStorage.setItem("entries", JSON.stringify(newState));
+
+            dispatch({ type: "SET_ENTRIES", payload: newState });
+
+            resolve({ ...entry, status: 1 });
+        }),
+    delete: (slug) => (dispatch, getStore) =>
+        new Promise((resolve, reject) => {
+            const payload = getStore().entries;
+            delete payload[slug];
+            localStorage.setItem("entries", JSON.stringify(payload));
+
+            dispatch({ type: "SET_ENTRIES", payload });
+            resolve({ slug, status: 1 });
+        }),
+    clear: () => (dispatch) =>
+        new Promise((resolve) => {
+            localStorage.setItem("entries", JSON.stringify(initialState.entries));
+            dispatch({ type: "CLEAR_ENTRIES" });
+            resolve({ status: 1 });
+        }),
+    export: () => {},
 };
 
 export const entriesReducer = (state = initialState.entries, action) => {

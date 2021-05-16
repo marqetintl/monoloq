@@ -1,0 +1,49 @@
+@use '../scss/variables' as vars;
+
+.todo {
+    display: flex;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: 1px solid #eee;
+
+    &.done {
+        .value {
+            text-decoration: line-through;
+        }
+    }
+
+    .value {
+        flex-grow: 1;
+    }
+}
+
+.todos {
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+
+    &-items {
+        flex-grow: 1;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+#TodosView {
+    margin-top: vars.$header-height;
+
+    .todo-add-form {
+        padding: 0.5rem;
+        padding-bottom: 1rem;
+        display: flex;
+
+        input {
+            flex-grow: 1;
+            font-size: 1rem;
+        }
+        .btn {
+            min-width: 100px;
+        }
+    }
+}

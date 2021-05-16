@@ -1,3 +1,4 @@
+@use './variables' as vars;
 @import "./logo";
 
 * {
@@ -5,34 +6,71 @@
     margin: 0;
 }
 
-#Monoloq {
-    height: 100vh;
-    overflow: hidden;
+.viewport {
+    flex-grow: 1;
     max-height: 100%;
     font-family: monospace;
-}
 
-.mn {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    &-main {
+        display: flex;
+        flex-direction: column;
+        padding: 60px 0;
+    }
 
-    &-body {
-        height: 100%;
+    &-content {
+        flex-grow: 1;
+        position: relative;
+        display: flex;
+        flex-direction: column;
         overflow-y: auto;
         overflow-x: hidden;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
+        .viewport-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            height: vars.$header-height;
+            z-index: 800;
+            margin: 25px;
 
-    &-main {
-        flex-grow: 1;
-    }
+            &-navlinks {
+                display: flex;
 
-    &-header {
-        padding: 0.25rem;
+                a {
+                    margin: 0 0.5rem;
+                    background-color: #eee;
+                    color: black;
+                    padding: 10px;
+                    border-radius: 24px;
+
+                    &.active {
+                        color: rgb(25, 103, 210);
+                        background-color: rgb(232, 240, 254);
+                    }
+                }
+            }
+        }
+
+        .viewport-footer {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: white;
+        }
+
+        .viewport-body {
+            position: relative;
+            overflow-y: auto;
+            overflow-x: hidden;
+            height: 100vh;
+            width: 100%;
+        }
     }
 }
 
