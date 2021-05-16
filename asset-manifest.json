@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/monoloq/static/css/main.c46b9605.chunk.css",
-    "main.js": "/monoloq/static/js/main.735746bd.chunk.js",
-    "main.js.map": "/monoloq/static/js/main.735746bd.chunk.js.map",
-    "runtime-main.js": "/monoloq/static/js/runtime-main.34bf5e99.js",
-    "runtime-main.js.map": "/monoloq/static/js/runtime-main.34bf5e99.js.map",
+    "main.js": "/monoloq/static/js/main.6289c13b.chunk.js",
+    "main.js.map": "/monoloq/static/js/main.6289c13b.chunk.js.map",
+    "runtime-main.js": "/monoloq/static/js/runtime-main.a1d8b7c9.js",
+    "runtime-main.js.map": "/monoloq/static/js/runtime-main.a1d8b7c9.js.map",
     "static/js/2.aa81f86e.chunk.js": "/monoloq/static/js/2.aa81f86e.chunk.js",
     "static/js/2.aa81f86e.chunk.js.map": "/monoloq/static/js/2.aa81f86e.chunk.js.map",
     "static/css/3.89ae04aa.chunk.css": "/monoloq/static/css/3.89ae04aa.chunk.css",
-    "static/js/3.d3efa845.chunk.js": "/monoloq/static/js/3.d3efa845.chunk.js",
-    "static/js/3.d3efa845.chunk.js.map": "/monoloq/static/js/3.d3efa845.chunk.js.map",
+    "static/js/3.f2a79000.chunk.js": "/monoloq/static/js/3.f2a79000.chunk.js",
+    "static/js/3.f2a79000.chunk.js.map": "/monoloq/static/js/3.f2a79000.chunk.js.map",
     "static/js/4.9a31ab62.chunk.js": "/monoloq/static/js/4.9a31ab62.chunk.js",
     "static/js/4.9a31ab62.chunk.js.map": "/monoloq/static/js/4.9a31ab62.chunk.js.map",
     "index.html": "/monoloq/index.html",
@@ -18,9 +18,9 @@
     "static/js/2.aa81f86e.chunk.js.LICENSE.txt": "/monoloq/static/js/2.aa81f86e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.34bf5e99.js",
+    "static/js/runtime-main.a1d8b7c9.js",
     "static/js/2.aa81f86e.chunk.js",
     "static/css/main.c46b9605.chunk.css",
-    "static/js/main.735746bd.chunk.js"
+    "static/js/main.6289c13b.chunk.js"
   ]
 }
