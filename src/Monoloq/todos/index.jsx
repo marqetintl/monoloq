@@ -82,14 +82,11 @@ const Todo = ({ data, dispatch, ...props }) => {
 };
 
 const WeekSelector = (props) => {
-    const setDate = ({ date }) => {
-        console.log(date);
-        props.setCurrDate(date);
-    };
+    const setDate = ({ date }) => props.setCurrDate(date);
 
     return (
         <div className="">
-            <Calendar view="week" onDateClick={setDate} />
+            <Calendar view="week" onDateClick={setDate} selected={props.currDate} />
         </div>
     );
 };
