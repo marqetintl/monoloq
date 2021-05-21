@@ -1,4 +1,4 @@
-import { formatDateToStr, getClassName } from "@miq/shared";
+import { formatDateToStr, getClassName, Calendar } from "@miq/shared";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { todosActions } from "./utils";
@@ -6,19 +6,20 @@ import { todosActions } from "./utils";
 import "./todos.scss";
 
 export default function TodosView(props) {
-    const [currDate] = useState(new Date());
+    const [currDate, setCurrDate] = useState(new Date());
     const [todo, setTodo] = useState("");
 
     const dispatch = useDispatch();
     const todos = useSelector((state) => state.todos)[formatDateToStr(currDate)] || [];
 
     useEffect(() => {
-        dispatch(todosActions.byDate(new Date()));
-    }, [dispatch]);
+        dispatch(todosActions.byDate(currDate));
+    }, [dispatch, currDate]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(todosActions.post(todo)).then(({ status }) => {
+        let fD = { value: todo, dt: currDate };
+        dispatch(todosActions.post(fD)).then(({ status }) => {
             setTodo("");
         });
     };
@@ -26,7 +27,7 @@ export default function TodosView(props) {
     return (
         <div id="TodosView">
             <div className="todos">
-                <WeekSelector />
+                <WeekSelector {...{ currDate, setCurrDate }} />
 
                 <div className="todos-items">
                     {todos.map((item) => (
@@ -81,5 +82,14 @@ const Todo = ({ data, dispatch, ...props }) => {
 };
 
 const WeekSelector = (props) => {
-    return <div className="">Week</div>;
+    const setDate = ({ date }) => {
+        console.log(date);
+        props.setCurrDate(date);
+    };
+
+    return (
+        <div className="">
+            <Calendar view="week" onDateClick={setDate} />
+        </div>
+    );
 };

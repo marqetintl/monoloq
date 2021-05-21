@@ -30,9 +30,9 @@ export const todosActions = {
             return resolve(items);
         }),
 
-    post: (value) => (dispatch) =>
+    post: (data) => (dispatch) =>
         new Promise((resolve) => {
-            const dt = new Date();
+            const { dt = new Date() } = data;
 
             const key = formatDateToStr(dt);
             const todos = getDB("todos");
@@ -40,8 +40,7 @@ export const todosActions = {
                 todos[key] = [];
             }
 
-            const fd = { slug: uuid(), value, dt };
-            todos[key].push(fd);
+            todos[key].push({ ...data, slug: uuid() });
 
             localStorage.setItem("todos", JSON.stringify(todos));
             dispatch({ type: "UPDATE_TODOS", payload: { [key]: todos[key] } });
