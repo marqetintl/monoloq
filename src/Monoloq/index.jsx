@@ -23,7 +23,6 @@ const SettingsView = lazy(() => import("./settings"));
 const TodosView = lazy(() => import("./todos"));
 
 export default function Monoloq(props) {
-    console.log(props.match);
     return (
         <div id="Monoloq" className="viewport">
             <div className="mn viewport-content">
