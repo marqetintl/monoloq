@@ -119,8 +119,3 @@ const Todo = ({ data, dispatch, ...props }) => {
         </div>
     );
 };
-
-const DateComp = (props) => {
-    console.log(props);
-    return <div className="">dai</div>;
-};
