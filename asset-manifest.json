@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/monoloq/static/css/main.d6c945b2.chunk.css",
-    "main.js": "/monoloq/static/js/main.2d24f751.chunk.js",
-    "main.js.map": "/monoloq/static/js/main.2d24f751.chunk.js.map",
-    "runtime-main.js": "/monoloq/static/js/runtime-main.6bef9f33.js",
-    "runtime-main.js.map": "/monoloq/static/js/runtime-main.6bef9f33.js.map",
-    "static/js/2.af2c5be8.chunk.js": "/monoloq/static/js/2.af2c5be8.chunk.js",
-    "static/js/2.af2c5be8.chunk.js.map": "/monoloq/static/js/2.af2c5be8.chunk.js.map",
-    "static/css/3.89ae04aa.chunk.css": "/monoloq/static/css/3.89ae04aa.chunk.css",
-    "static/js/3.258cb0f5.chunk.js": "/monoloq/static/js/3.258cb0f5.chunk.js",
-    "static/js/3.258cb0f5.chunk.js.map": "/monoloq/static/js/3.258cb0f5.chunk.js.map",
-    "static/js/4.6848e4e0.chunk.js": "/monoloq/static/js/4.6848e4e0.chunk.js",
-    "static/js/4.6848e4e0.chunk.js.map": "/monoloq/static/js/4.6848e4e0.chunk.js.map",
+    "main.css": "/monoloq/static/css/main.038b35ab.chunk.css",
+    "main.js": "/monoloq/static/js/main.509c74ec.chunk.js",
+    "main.js.map": "/monoloq/static/js/main.509c74ec.chunk.js.map",
+    "runtime-main.js": "/monoloq/static/js/runtime-main.4a1947b9.js",
+    "runtime-main.js.map": "/monoloq/static/js/runtime-main.4a1947b9.js.map",
+    "static/js/2.d2cbdfa7.chunk.js": "/monoloq/static/js/2.d2cbdfa7.chunk.js",
+    "static/js/2.d2cbdfa7.chunk.js.map": "/monoloq/static/js/2.d2cbdfa7.chunk.js.map",
+    "static/css/3.4e37df3a.chunk.css": "/monoloq/static/css/3.4e37df3a.chunk.css",
+    "static/js/3.56dc61bc.chunk.js": "/monoloq/static/js/3.56dc61bc.chunk.js",
+    "static/js/3.56dc61bc.chunk.js.map": "/monoloq/static/js/3.56dc61bc.chunk.js.map",
+    "static/js/4.f5f79601.chunk.js": "/monoloq/static/js/4.f5f79601.chunk.js",
+    "static/js/4.f5f79601.chunk.js.map": "/monoloq/static/js/4.f5f79601.chunk.js.map",
     "index.html": "/monoloq/index.html",
-    "static/css/3.89ae04aa.chunk.css.map": "/monoloq/static/css/3.89ae04aa.chunk.css.map",
-    "static/css/main.d6c945b2.chunk.css.map": "/monoloq/static/css/main.d6c945b2.chunk.css.map",
-    "static/js/2.af2c5be8.chunk.js.LICENSE.txt": "/monoloq/static/js/2.af2c5be8.chunk.js.LICENSE.txt"
+    "static/css/3.4e37df3a.chunk.css.map": "/monoloq/static/css/3.4e37df3a.chunk.css.map",
+    "static/css/main.038b35ab.chunk.css.map": "/monoloq/static/css/main.038b35ab.chunk.css.map",
+    "static/js/2.d2cbdfa7.chunk.js.LICENSE.txt": "/monoloq/static/js/2.d2cbdfa7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.6bef9f33.js",
-    "static/js/2.af2c5be8.chunk.js",
-    "static/css/main.d6c945b2.chunk.css",
-    "static/js/main.2d24f751.chunk.js"
+    "static/js/runtime-main.4a1947b9.js",
+    "static/js/2.d2cbdfa7.chunk.js",
+    "static/css/main.038b35ab.chunk.css",
+    "static/js/main.509c74ec.chunk.js"
   ]
 }
