@@ -32,14 +32,14 @@ export default function Monoloq(props) {
                     </div>
 
                     <div className="viewport-header-navlinks">
-                        <NavLink exact to={"/monoloq"} className="btn">
-                            <JournalPlus className="btn-icon" />
+                        <NavLink exact to={"/monoloq"} className="btn btn-icon">
+                            <JournalPlus className="icon" />
                         </NavLink>
-                        <NavLink to={"/monoloq/todo/"} className="btn">
-                            <CardChecklist className="btn-icon" />
+                        <NavLink to={"/monoloq/todo/"} className="btn btn-icon">
+                            <CardChecklist className="icon" />
                         </NavLink>
-                        <NavLink to={"/monoloq/settings/"} className="btn">
-                            <Gear className="btn-icon" />
+                        <NavLink to={"/monoloq/settings/"} className="btn btn-icon">
+                            <Gear className="icon" />
                         </NavLink>
                     </div>
                 </header>

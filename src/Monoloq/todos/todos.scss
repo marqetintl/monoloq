@@ -1,5 +1,29 @@
 @use '../scss/variables' as vars;
 
+.grid-2 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+
+    .aside {
+        display: none;
+    }
+
+    .todos {
+        flex-grow: 1;
+    }
+}
+
+@media (min-width: 800px) {
+    .grid-2 {
+        flex-direction: row;
+
+        .aside {
+            display: block;
+        }
+    }
+}
+
 .todo {
     display: flex;
     margin: 0.5rem 0;
@@ -22,11 +46,37 @@
     flex-direction: column;
     padding: 6px;
 
+    #date-select {
+        .miq-datepicker {
+            &-month,
+            &-footer {
+                padding: 6px;
+            }
+            &-toolbar {
+                padding: 6px;
+                border-bottom: 1px solid #eee;
+            }
+
+            &-body {
+                border: 1px solid #eee;
+                border-radius: 6px;
+                background-color: white;
+            }
+            .Title {
+                font-weight: 600;
+            }
+        }
+    }
+
     &-items {
         flex-grow: 1;
         width: 100%;
         max-width: 800px;
         margin: 0 auto;
+    }
+
+    .Week {
+        flex-grow: 1;
     }
 }
 
